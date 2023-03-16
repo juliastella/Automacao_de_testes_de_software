@@ -12,7 +12,7 @@ public abstract class BasePO {
     protected WebDriver driver;
     
     /**Costrutor base para a criação da fabrica de elemntos (PageFactory)*/
-    protected BasePO(WebDriver driver){
+    public BasePO(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     } // O PageFactory vai é fabrica de pagina, você para de ficar buscando e capturando codigos grandes, pois ele gera isso.
