@@ -26,8 +26,6 @@ public class GoogleTest extends BaseTest {
        String resultado = googlePage.obeterResultadoDaPesquisa(); 
      
        assertTrue(resultado, resultado.contains("Aproximadamente")); // Vai testar se o que esta dentro de resulto bate
-                                                                     // com o que é escrito no ().
-
        driver.quit();
    }
    
@@ -42,9 +40,6 @@ public class GoogleTest extends BaseTest {
         String resultado = googlePage.obeterResultadoDaPesquisa(); 
 
         assertTrue(resultado, resultado.contains("Aproximadamente")); 
-                                                                      
-
-        driver.quit();
     }
 
 }
