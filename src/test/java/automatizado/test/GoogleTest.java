@@ -14,11 +14,12 @@ public class GoogleTest extends BaseTest {
 
     @BeforeClass
     public static void prepararteste() {
+        driver.get("https://www.google.com/"); // vai para a URL do Google.
         googlePage = new GooglePO(driver);
     }
 
    @Test // Isso afirma que é um caso de teste.
-   public void TC001_devePesquisarNoGooglrOtextoBatataFrita() {
+    public void TC001_devePesquisarNoGooglrOtextoBatataFrita() {
        iniciar();
 
        googlePage.pesquisar("Batata frita"); // vai escrever na pagina.

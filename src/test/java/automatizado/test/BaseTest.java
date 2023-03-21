@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public abstract class BaseTest {
     
     protected static WebDriver driver;
-    private static String URL_BASE = "https://www.google.com/";
+    private static String URL_BASE = "http://127.0.0.1:5500/sistema/login.html";
 
     @BeforeClass //  vem do junit e impõem que essa class vai ser chamada antes de qualquer outra class
     public static void iniciar(){ // Isso vai fazer com que inicie o drive
