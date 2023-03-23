@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPO extends BasePO {
 
+    //Elementos maqpeados
+
     @FindBy(id = "email")
     public WebElement inputEmail;
 
@@ -25,11 +27,6 @@ public class LoginPO extends BasePO {
     public LoginPO(WebDriver driver) {
         super(driver);
     }
-
-    public void escrever(WebElement input, String texto){// Escrever nos campos de input
-        input.clear(); //Para limbar o campo antes de escrever.
-        input.sendKeys(texto + Keys.TAB);
-    }
     
     public String obterMessagem(){ // Esse metodo vai retonar a mensagem de texto.
         return mensagemSpan.getText();
@@ -40,9 +37,5 @@ public class LoginPO extends BasePO {
         escrever(inputSenha, senha);
 
         buttonEntar.click(); // Apertar no butão
-    }
-
-    public String obterTituloPagina(){
-        return driver.getTitle();
     }
 }
