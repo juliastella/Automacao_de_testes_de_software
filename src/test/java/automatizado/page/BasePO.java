@@ -20,9 +20,15 @@ public abstract class BasePO {
     } // O PageFactory vai é fabrica de pagina, você para de ficar buscando e capturando codigos grandes, pois ele gera isso.
     //  O PageFactory, é uma biblioteca que aplica um padrão de fabrica.
     
+    /*
+    * Metodo retonar o titulo da pagina atual.
+    */
     public String obterTituloPagina(){ //Obtem o titulo da pagina.
         return driver.getTitle();
     }
+    /*
+    * Metodo que sabe escrever em qualquer WebElement e da um TAB ao final. 
+    */
     public void escrever(WebElement input, String texto){// Escrever nos campos de input
         input.clear(); //Para limbar o campo antes de escrever.
         input.sendKeys(texto + Keys.TAB);

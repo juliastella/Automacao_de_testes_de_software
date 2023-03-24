@@ -41,11 +41,10 @@ public class ContoleleDeProdutoPO extends BasePO{
     public WebElement buttonSair;
 
     @FindBy(id = "mensagem")
-    public WebElement messagemSpan;
+    public WebElement SpanMensagem;
 
     public ContoleleDeProdutoPO(WebDriver driver) {
         super(driver);
-        //TODO Auto-generated constructor stub
     }
 
     public void cadastrarProduto(String codigo, String nome, Integer quantidade, Double valor, String data){
@@ -58,12 +57,6 @@ public class ContoleleDeProdutoPO extends BasePO{
         buttonSalvar.click();
     }
     public void cadastrarProduto(ProdutoBuilder produtoBuilder){
-        escrever(inputCodigo, produtoBuilder.codigo);
-        escrever(inputNome, produtoBuilder.data);
-        escrever(inputQuantidade, produtoBuilder.toString());
-        escrever(inputValor, produtoBuilder.valor.toString());
-        escrever(inputData, produtoBuilder.data);
-        
-        buttonSalvar.click();
+      produtoBuilder.builder();
     }
 }
